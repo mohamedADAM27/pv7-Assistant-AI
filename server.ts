@@ -113,11 +113,22 @@ async function startServer() {
   }
 
   // 4. Start listening
-  app.listen(PORT, "0.0.0.0", () => {
+  const server = app.listen(PORT, "0.0.0.0", () => {
     console.log(`[Startup] Full-stack application running at: http://localhost:${PORT}`);
+    console.log(`[Startup] Access your app at: http://0.0.0.0:${PORT}`);
+  });
+
+  // Handle server errors
+  server.on("error", (err: any) => {
+    if (err.code === "EADDRINUSE") {
+      console.error(`[Startup Error] Port ${PORT} is already in use!`);
+    } else {
+      console.error("[Startup Error] Server error:", err);
+    }
+    process.exit(1);
   });
 }
 
 startServer().catch((err) => {
   console.error("[Fatal Startup Error]:", err);
-});
+  process.exit(1);

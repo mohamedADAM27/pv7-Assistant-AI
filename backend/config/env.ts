@@ -1,10 +1,13 @@
 import dotenv from "dotenv";
 import path from "path";
 
-// Load environment variables from .env with explicit path
-dotenv.config({
-  path: path.resolve(process.cwd(), ".env"),
-});
+// Load environment variables from .env only in development
+// In production (Railway), environment variables are set by the platform
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config({
+    path: path.resolve(process.cwd(), ".env"),
+  });
+}
 
 export interface Env {
   GEMINI_API_KEY: string;
@@ -24,9 +27,12 @@ const getEnvOrThrow = (key: string): string => {
   return value;
 };
 
+// Railway and other hosting platforms set PORT dynamically - always prioritize it
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+
 export const env: Env = {
   GEMINI_API_KEY: getEnvOrThrow("GEMINI_API_KEY"),
-  PORT: process.env.PORT ? parseInt(process.env.PORT, 10) : 3000,
-  APP_URL: process.env.APP_URL || "http://localhost:3000",
+  PORT,
+  APP_URL: process.env.APP_URL || `http://localhost:${PORT}`,
   NODE_ENV: process.env.NODE_ENV || "development",
 };
