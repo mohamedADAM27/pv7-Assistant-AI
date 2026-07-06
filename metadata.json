@@ -1,0 +1,6 @@
+{
+  "name": "Yellow Page",
+  "description": "A single-page website with a solid yellow background and no text.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
