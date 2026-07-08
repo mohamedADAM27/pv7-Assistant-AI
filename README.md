@@ -5,7 +5,7 @@
 
 ### Enterprise-Grade Retrieval-Augmented Generation (RAG) AI Assistant
 
-<img src="./assets/pv7-banner.png" width="100%" alt="PV7 Assistant Banner"/>
+<img src="https://www.google.com/imgres?q=provahan%20infotech&imgurl=https%3A%2F%2Fimg.magicpin.com%2F10501880_store_images_1.jpg&imgrefurl=https%3A%2F%2Fmagicpin.in%2FChennai%2FPeravallur%2FOther%2FProvahan-Infotech-Pvt-Ltd%2Fstore%2F223913c%3Fsrsltid%3DAfmBOoquK9H9zZIgrpTpeIiVJn3WyPU5pluN2K8ePaIvwoBAMBAw6DL6&docid=Rrj3R6yH8LjswM&tbnid=96W_nGQRVdF4-M&vet=12ahUKEwi6sIWptcOVAxUXja8BHZ75D_oQnPAOegQIPhAA..i&w=800&h=323&hcb=2&itg=1&ved=2ahUKEwi6sIWptcOVAxUXja8BHZ75D_oQnPAOegQIPhAA"/>
 
 *Transforming Enterprise Knowledge into Intelligent Conversations.*
 
