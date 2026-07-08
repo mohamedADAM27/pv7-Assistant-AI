@@ -1,12 +1,11 @@
 
 <div align="center">
 
-# PV7 Assistant
-
+<img src="./images/WhatsApp Image 2026-07-08 at 6.31.21 PM.jpeg" width="100%" alt="PV7 Assistant Banner"/>
 ### Enterprise-Grade Retrieval-Augmented Generation (RAG) AI Assistant
 
 <img src="./images/WhatsApp Image 2026-07-08 at 6.31.21 PM.jpeg" width="100%" alt="PV7 Assistant Banner" style="width: 250px; height: 55px;" width="250" height="55"/>
-<img src="https://trendshift.io/api/badge/repositories/16144" alt="666ghj%2FMiroFish | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
+
 
 *Transforming Enterprise Knowledge into Intelligent Conversations.*
 
