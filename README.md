@@ -1,205 +1,238 @@
+
 <div align="center">
 
 # PV7 Assistant
 
-### Production-Ready RAG AI Assistant for Enterprise Knowledge Retrieval
+### Enterprise-Grade Retrieval-Augmented Generation (RAG) AI Assistant
 
-<img src="./assets/pv7-banner.png" alt="PV7 Assistant Banner" width="100%"/>
+<img src="./assets/pv7-banner.png" width="100%" alt="PV7 Assistant Banner"/>
 
-<br/>
+*Transforming Enterprise Knowledge into Intelligent Conversations.*
 
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)
-![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss)
-![Gemini](https://img.shields.io/badge/Google-Gemini-4285F4?style=for-the-badge&logo=google)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss)
+![Google Gemini](https://img.shields.io/badge/Google-Gemini-4285F4?style=for-the-badge&logo=google)
 ![RAG](https://img.shields.io/badge/RAG-Powered-7B61FF?style=for-the-badge)
 
-### Enterprise AI Assistant built for intelligent document retrieval, secure customer support, and modern presentation experiences.
+**Production-ready AI assistant built for intelligent enterprise knowledge retrieval, secure customer support, and modern presentation experiences.**
+
+**English** | **தமிழ்**
 
 </div>
 
 ---
 
-# Overview
+# ⚡ Overview
 
-**PV7 Assistant** is a production-ready **Retrieval-Augmented Generation (RAG)** AI chatbot developed for **Provahan Infotech** to automate customer query resolution through intelligent document retrieval and context-aware conversations.
+**PV7 Assistant** is a production-ready Retrieval-Augmented Generation (RAG) AI assistant developed for **Provahan Infotech** to automate enterprise customer support through intelligent document retrieval and context-aware conversations.
 
-Unlike traditional chatbots that rely solely on LLM knowledge, PV7 Assistant retrieves relevant information from an enterprise knowledge base before generating responses, enabling significantly higher factual accuracy and reducing hallucinations.
+The platform combines a modern swipe-based presentation portal with a secure AI assistant capable of retrieving information from enterprise knowledge bases before generating responses. Rather than relying solely on an LLM's internal knowledge, PV7 Assistant grounds every response using relevant company documents, reducing hallucinations while improving factual accuracy.
 
-The project combines a modern swipe-based presentation portal with an enterprise-grade AI assistant featuring secure backend architecture, prompt engineering, automatic Gemini model failover, and multiple security safeguards.
+Built with **React**, **Express.js**, **TypeScript**, **Google Gemini**, and advanced prompt engineering, the project focuses on reliability, security, performance, and user experience.
 
 ---
 
-# Features
+# 🌟 Our Vision
 
-## AI & RAG
+Enterprise knowledge should be instantly accessible through natural language.
+
+PV7 Assistant aims to bridge the gap between static documentation and intelligent AI assistance by combining Retrieval-Augmented Generation (RAG), secure backend architecture, advanced prompt engineering, and intuitive user experiences into a single production-ready platform.
+
+---
+
+# 🌐 Live Demo
+
+> **Coming Soon**
+
+The live demonstration will showcase:
+
+- Swipe-based presentation portal
+- Intelligent enterprise AI assistant
+- RAG-powered document retrieval
+- Dynamic theme-adaptive glassmorphism
+- Enterprise knowledge search
+
+---
+
+# 📸 Screenshots
+
+<p align="center">
+<img src="./assets/pv7-demo.png" width="100%" alt="PV7 Screenshot"/>
+</p>
+
+> Replace with actual screenshots.
+
+---
+
+# 🎥 Demo Videos
+
+### Product Walkthrough
+
+*Coming Soon*
+
+### Enterprise Knowledge Retrieval Demo
+
+*Coming Soon*
+
+---
+
+# ✨ Core Features
+
+## AI Intelligence
 
 - Retrieval-Augmented Generation (RAG)
 - Enterprise Knowledge Base Search
-- PDF Document Retrieval
-- Context-Aware Responses
+- PDF Knowledge Retrieval
 - Google Gemini Integration
 - Advanced Prompt Engineering
-- Intelligent Context Matching
-- Low-Latency Response Generation
-
----
+- Context-Aware Responses
+- Semantic Retrieval
+- Multi-Model AI Failover
 
 ## Enterprise Security
 
 - Prompt Injection Mitigation
-- Personally Identifiable Information (PII) Masking
+- PII Masking
 - Secure Backend API Proxy
 - Hidden API Keys
 - Response Sanitization
-- Markdown Filtering
+- Markdown Cleaning
 - Environment Variable Isolation
-
----
 
 ## User Experience
 
-- Swipe-Based Presentation Portal
-- Theme Adaptive AI Assistant
-- Glassmorphism Interface
+- Swipe-Based Presentation Interface
+- Theme Adaptive Glassmorphism
 - Responsive Layout
 - Framer Motion Animations
-- Modern Minimal UI
-- Keyboard & Touch Navigation
+- Keyboard Navigation
+- Mobile Friendly Design
 
 ---
 
-# Architecture
+# 🏗️ System Architecture
 
-```
-                    User
-                      │
-                      ▼
-           React + Vite Frontend
-                      │
-                      ▼
-              Express Backend
-                      │
-                      ▼
-         Retrieval Pipeline (RAG)
-                      │
-                      ▼
-         Prompt Engineering Layer
-                      │
-                      ▼
-          Google Gemini Models
-                      │
-                      ▼
-        Response Sanitization Layer
-                      │
-                      ▼
-                AI Response
-```
-
----
-
-# AI Request Flow
-
-```
-User Query
-      │
-      ▼
-Retrieve Relevant Documents
-      │
-      ▼
-Build Context
-      │
-      ▼
-Prompt Engineering
-      │
-      ▼
-Gemini API
-      │
-      ▼
-Security Validation
-      │
-      ▼
-Clean Response
-      │
-      ▼
-Frontend Rendering
+```text
++-------------------------------------------------------------+
+|                      PV7 Assistant                          |
++-------------------------------------------------------------+
+| React + Vite Frontend                                       |
+|                │                                            |
+|                ▼                                            |
+| Express.js Backend API                                      |
+|                │                                            |
+|                ▼                                            |
+| Retrieval-Augmented Generation Pipeline                     |
+|                │                                            |
+|                ▼                                            |
+| Prompt Engineering Layer                                    |
+|                │                                            |
+|                ▼                                            |
+| Google Gemini Multi-Model Engine                            |
+|                │                                            |
+|                ▼                                            |
+| Security & Response Sanitization                            |
+|                │                                            |
+|                ▼                                            |
+| Intelligent Enterprise Response                             |
++-------------------------------------------------------------+
 ```
 
 ---
 
-# Multi-Model Failover
+# 🔄 Workflow
 
-PV7 Assistant implements an automatic fallback mechanism to ensure uninterrupted AI responses.
-
-```
-Gemini 2.5 Pro
-        │
-        ▼
-Gemini 2.5 Flash
-        │
-        ▼
-Gemini 1.5 Pro
-        │
-        ▼
-Gemini 1.5 Flash
-```
-
-If a model becomes unavailable due to quota limits, rate limiting, or temporary service interruptions, the backend automatically switches to the next available model without affecting the user experience.
+1. User submits a query.
+2. Backend retrieves relevant enterprise knowledge.
+3. Context is injected using advanced prompt engineering.
+4. Gemini generates a grounded response.
+5. Prompt injection and PII safeguards validate output.
+6. Response is sanitized and returned to the client.
 
 ---
 
-# User Interface
+# 🛡️ Security & Privacy
 
-The application features a swipeable presentation environment consisting of four minimalist presentation canvases.
+PV7 Assistant incorporates enterprise-oriented security practices.
 
-- Yellow Theme
-- White Theme
-- Red Theme
-- Black Theme
-
-The PV7 Assistant dynamically adapts its appearance based on the active presentation theme, ensuring visual consistency, readability, and accessibility.
-
----
-
-# Screenshots
-
-<p align="center">
-
-<img src="./assets/pv7-demo.png" width="100%">
-
-</p>
-
-> Replace the placeholder above with your application screenshot.
+- Prompt Injection Mitigation
+- Personally Identifiable Information (PII) Masking
+- Backend API Proxy
+- Hidden Gemini API Keys
+- Environment Variable Isolation
+- Plain Text Response Sanitization
 
 ---
 
-# Technology Stack
+# 🛠️ Technology Stack
 
 | Category | Technologies |
-|------------|-------------|
-| Frontend | React 18 |
-| Build Tool | Vite |
-| Styling | Tailwind CSS |
-| Animations | Framer Motion |
-| Backend | Express.js |
-| Runtime | Node.js |
+|----------|--------------|
+| Frontend | React 18, Vite |
+| Backend | Express.js, Node.js |
 | Language | TypeScript |
+| Styling | Tailwind CSS |
+| Animation | Framer Motion |
 | AI | Google Gemini API |
-| AI Techniques | Retrieval-Augmented Generation (RAG), Prompt Engineering |
+| AI Techniques | RAG, Prompt Engineering |
 | Icons | Lucide React |
 
 ---
 
-# Project Structure
+# 🚀 Quick Start
 
+## Prerequisites
+
+- Node.js 18+
+- npm
+
+## Installation
+
+```bash
+git clone https://github.com/yourusername/pv7-assistant.git
+
+cd pv7-assistant
+
+npm install
 ```
+
+Create a `.env` file:
+
+```env
+GEMINI_API_KEY=YOUR_API_KEY
+```
+
+Run:
+
+```bash
+npm run dev
+```
+
+Build:
+
+```bash
+npm run build
+```
+
+Production:
+
+```bash
+npm start
+```
+
+---
+
+# 📂 Project Structure
+
+```text
 .
-├── src
+├── src/
 │   ├── App.tsx
 │   ├── main.tsx
 │   └── index.css
-│
 ├── server.ts
 ├── package.json
 ├── tsconfig.json
@@ -211,93 +244,17 @@ The PV7 Assistant dynamically adapts its appearance based on the active presenta
 
 ---
 
-# Installation
-
-## Clone Repository
-
-```bash
-git clone https://github.com/yourusername/pv7-assistant.git
-
-cd pv7-assistant
-```
-
----
-
-## Install Dependencies
-
-```bash
-npm install
-```
-
----
-
-## Configure Environment Variables
-
-Create a `.env` file.
-
-```env
-GEMINI_API_KEY=YOUR_API_KEY
-```
-
----
-
-## Start Development Server
-
-```bash
-npm run dev
-```
-
-The application will be available at
-
-```
-http://localhost:3000
-```
-
----
-
-## Production Build
-
-```bash
-npm run build
-```
-
----
-
-## Start Production Server
-
-```bash
-npm start
-```
-
----
-
-# Security
-
-PV7 Assistant follows enterprise-oriented security practices designed to protect both users and backend infrastructure.
-
-### Implemented Protections
-
-- Prompt Injection Detection & Mitigation
-- PII Masking (Email Addresses, Phone Numbers)
-- Backend API Proxy
-- Secure Environment Variables
-- Hidden Gemini API Key
-- Sanitized AI Responses
-- Clean Plain-Text Rendering
-
----
-
-# Resume Highlights
+# 💡 Engineering Highlights
 
 - Developed **PV7 Assistant**, a production-ready Retrieval-Augmented Generation (RAG) AI chatbot for enterprise customer support.
-- Integrated **Google Gemini API** with RAG and advanced prompt engineering techniques to generate accurate, context-aware responses.
-- Implemented **prompt injection mitigation** and **PII masking** to prevent sensitive information such as phone numbers and email addresses from being exposed to the LLM.
+- Integrated **Google Gemini API** with Retrieval-Augmented Generation (RAG) and advanced prompt engineering to generate accurate, context-aware responses.
+- Implemented prompt injection mitigation and PII masking to prevent sensitive information such as phone numbers and email addresses from being exposed to the LLM.
 - Built a secure Express backend with automatic Gemini multi-model failover for improved reliability and availability.
 - Designed a modern swipe-based presentation interface with dynamic glassmorphism and responsive UI.
 
 ---
 
-# Future Enhancements
+# 🗺️ Future Enhancements
 
 - Voice Conversations
 - Streaming AI Responses
@@ -310,11 +267,27 @@ PV7 Assistant follows enterprise-oriented security practices designed to protect
 
 ---
 
-# Author
+# 🙏 Acknowledgements
 
-**Mohamed Adam**
+Special thanks to the open-source technologies that power this project.
 
-Computer Science Engineering Student
+- React
+- Vite
+- Express.js
+- Tailwind CSS
+- Framer Motion
+- Google Gemini API
+- Lucide React
+- TypeScript
+- Node.js
+
+---
+
+# 👨‍💻 Author
+
+## Mohamed Adam
+
+**Computer Science Engineering Student**
 
 Passionate about Artificial Intelligence, Full Stack Development, and Building Production-Ready AI Systems.
 
@@ -322,6 +295,8 @@ Passionate about Artificial Intelligence, Full Stack Development, and Building P
 
 <div align="center">
 
-### ⭐ If you found this project interesting, consider giving it a star!
+## ⭐ If you found this project interesting, consider giving it a Star!
+
+Made with ❤️ by Mohamed Adam
 
 </div>
