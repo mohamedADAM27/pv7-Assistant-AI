@@ -1,7 +1,7 @@
 
 <div align="center">
 
-<img src="./images/WhatsApp Image 2026-07-08 at 6.31.21 PM.jpeg" width="100%" alt="PV7 Assistant Banner"  width="75%"/>
+<img src="./images/WhatsApp Image 2026-07-08 at 6.31.21 PM.jpeg" alt="PV7 Assistant Banner"  width="75%"/>
 ### Enterprise-Grade Retrieval-Augmented Generation (RAG) AI Assistant
 
 <img src="./images/WhatsApp Image 2026-07-08 at 6.31.21 PM.jpeg" width="100%" alt="PV7 Assistant Banner" style="width: 250px; height: 55px;" width="250" height="55"/>
