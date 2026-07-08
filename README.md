@@ -1,149 +1,327 @@
-# PV7-Provahan Portal & Assistant
-An enterprise-grade, high-fidelity swipable presentation portal equipped with a dynamic, theme-adaptive glassmorphic AI assistant ("PV7 Assistant"). Built with a full-stack architecture utilizing **React 18**, **Tailwind CSS**, **Framer Motion**, and a robust **Express** backend proxying the **Google Gemini API** with automatic multi-model failover orchestration.
+<div align="center">
+
+# PV7 Assistant
+
+### Production-Ready RAG AI Assistant for Enterprise Knowledge Retrieval
+
+<img src="./assets/pv7-banner.png" alt="PV7 Assistant Banner" width="100%"/>
+
+<br/>
+
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss)
+![Gemini](https://img.shields.io/badge/Google-Gemini-4285F4?style=for-the-badge&logo=google)
+![RAG](https://img.shields.io/badge/RAG-Powered-7B61FF?style=for-the-badge)
+
+### Enterprise AI Assistant built for intelligent document retrieval, secure customer support, and modern presentation experiences.
+
+</div>
 
 ---
 
-## 🚀 Key Architectural Overview
+# Overview
 
-This platform is engineered to serve as a clean, minimalist, high-contrast swipable presentation environment. It features four primary canvas pages (Yellow, White, Red, and Black) and a sophisticated conversational chatbot.
+**PV7 Assistant** is a production-ready **Retrieval-Augmented Generation (RAG)** AI chatbot developed for **Provahan Infotech** to automate customer query resolution through intelligent document retrieval and context-aware conversations.
+
+Unlike traditional chatbots that rely solely on LLM knowledge, PV7 Assistant retrieves relevant information from an enterprise knowledge base before generating responses, enabling significantly higher factual accuracy and reducing hallucinations.
+
+The project combines a modern swipe-based presentation portal with an enterprise-grade AI assistant featuring secure backend architecture, prompt engineering, automatic Gemini model failover, and multiple security safeguards.
+
+---
+
+# Features
+
+## AI & RAG
+
+- Retrieval-Augmented Generation (RAG)
+- Enterprise Knowledge Base Search
+- PDF Document Retrieval
+- Context-Aware Responses
+- Google Gemini Integration
+- Advanced Prompt Engineering
+- Intelligent Context Matching
+- Low-Latency Response Generation
+
+---
+
+## Enterprise Security
+
+- Prompt Injection Mitigation
+- Personally Identifiable Information (PII) Masking
+- Secure Backend API Proxy
+- Hidden API Keys
+- Response Sanitization
+- Markdown Filtering
+- Environment Variable Isolation
+
+---
+
+## User Experience
+
+- Swipe-Based Presentation Portal
+- Theme Adaptive AI Assistant
+- Glassmorphism Interface
+- Responsive Layout
+- Framer Motion Animations
+- Modern Minimal UI
+- Keyboard & Touch Navigation
+
+---
+
+# Architecture
 
 ```
-+-------------------------------------------------------------------------+
-|                                                                         |
-|                          PV7-Provahan Portal                            |
-|                                                                         |
-|  +--------------------+  +--------------------+  +--------------------+ |
-|  |                    |  |                    |  |                    | |
-|  |    Yellow Page     |  |     White Page     |  |      Red Page      | |
-|  | (Swipable Canvas)  |  | (Swipable Canvas)  |  | (Swipable Canvas)  | |
-|  |                    |  |                    |  |                    | |
-|  +--------------------+  +--------------------+  +--------------------+ |
-|                                                                         |
-|                        +-----------------------+                        |
-|                        |     PV7 Assistant     |                        |
-|                        |  Adapts color/border  |                        |
-|                        |   to current active   |                        |
-|                        |     page palette      |                        |
-|                        +-----------------------+                        |
-+-------------------------------------------------------------------------+
-```
-
----
-
-## 🎨 User Interface & Presentation Layer
-
-### 1. Minimalist Theme Canvas (Swipable Pages)
-The core viewport is designed around minimalist physical color representations:
-*   **Page 0 (Yellow Page):** Styled with solid `#FACC15` (`bg-yellow-400`).
-*   **Page 1 (White Page):** Styled with solid `#FFFFFF` (`bg-white`).
-*   **Page 2 (Red Page):** Styled with solid `#DC2626` (`bg-red-600`).
-*   **Black Page**: Styled with solid `#0A0A0A` (`bg-neutral-950`).
-
-All background text and illustrative distractions have been explicitly stripped to maintain a sleek, modern, and noise-free user experience. Navigation between these slides is handled with fluid mouse-drag/touch gestures and directional keyboard arrows.
-
-### 2. Theme-Adaptive Glassmorphism
-The **PV7 Assistant** chat panel utilizes advanced custom glassmorphism parameters. Instead of generic overlays, the chat panel’s design shifts dynamically to align with the active page theme to preserve visual contrast, contrast-safety ratios, and readability:
-
-| Page / Theme | Chat Overlay Background | Border Style | Core Typography | Active Accent Dot |
-| :--- | :--- | :--- | :--- | :--- |
-| **Yellow Page** | `rgba(255, 255, 255, 0.15)` | `1px solid rgba(255, 255, 255, 0.25)` | Deep Indigo (`text-purple-950`) | Purple (`bg-purple-600`) |
-| **White Page** | `rgba(255, 255, 255, 0.15)` | `1px solid rgba(255, 255, 255, 0.25)` | Slate Gray (`text-gray-800`) | Purple (`bg-purple-600`) |
-| **Red Page** | `rgba(255, 255, 255, 0.15)` | `1px solid rgba(255, 255, 255, 0.25)` | Pure White (`text-white`) | White (`bg-white`) |
-| **Black Page** | `rgba(255, 255, 255, 0.08)` | `1px solid rgba(255, 255, 255, 0.15)` | Off-White (`text-white`) | White (`bg-white`) |
-
----
-
-## 🤖 Intelligent Conversational Engine
-
-### 1. Robust Server-Side API Proxies
-The application protects sensitive infrastructure credentials. The client is **completely decoupled** from backend API keys. All conversational queries are routed via Express to `/api/chat`, keeping the `GEMINI_API_KEY` safe behind server walls.
-
-### 2. Multi-Model Failover Protocol
-To guarantee high-availability and zero downtime during high demand spikes, the backend employs a hierarchical failover loop over Google's premier models:
-
-1.  **Primary:** `gemini-2.5-pro` (Handles advanced logic, structured context matching, and rich knowledge processing).
-2.  **Secondary Fallback:** `gemini-2.5-flash` (Ensures lightning-fast response times if the primary model is busy).
-3.  **Tertiary Fallback:** `gemini-1.5-pro` (Provides comprehensive backup processing capabilities).
-4.  **Quaternary Fallback:** `gemini-1.5-flash` (Last-mile resilience tier).
-
-If a `503 Service Unavailable` or rate limit occurs on any model, the system executes an automated, transparent model-swap to the next fallback tier in real-time.
-
-### 3. Ultra-Clean Text Processing
-A key requirement of the corporate client layout is standard plain text outputs. All Markdown bold/italics elements (`**` and `*` characters) are filtered and sanitized server-side and client-side before rendering, producing highly polished, clean typography free of structural markdown noise.
-
----
-
-## 🛠️ Technological Stack
-
-*   **Frontend Library:** React 18 with Vite compiler.
-*   **Motion and Physics:** `motion/react` (Framer Motion) for page transitions and hardware-accelerated swipe physics.
-*   **Styling Engine:** Tailwind CSS with fluid grid layout parameters.
-*   **Backend Server:** Express.js + Node.js.
-*   **AI Integration:** `@google/genai` TypeScript SDK.
-*   **Icons:** `lucide-react` library.
-
----
-
-## 📦 File and Folder Structure
-
-```
-├── .env.example          # Template for server-side environment configurations
-├── .gitignore            # Specifier for untracked workspace artifacts
-├── index.html            # Main SPA mount vector
-├── metadata.json         # Platform configuration & metadata parameters
-├── package.json          # Dependency list and dev/build task scripts
-├── server.ts             # Main Node.js/Express server containing multi-model routing
-├── src/
-│   ├── main.tsx          # Client-side application entrypoint
-│   ├── index.css         # Tailwind directives and custom variables
-│   └── App.tsx           # Full Swipable Deck layout, Glassmorphic Chat UI & state
-└── tsconfig.json         # TypeScript compiler configurations
+                    User
+                      │
+                      ▼
+           React + Vite Frontend
+                      │
+                      ▼
+              Express Backend
+                      │
+                      ▼
+         Retrieval Pipeline (RAG)
+                      │
+                      ▼
+         Prompt Engineering Layer
+                      │
+                      ▼
+          Google Gemini Models
+                      │
+                      ▼
+        Response Sanitization Layer
+                      │
+                      ▼
+                AI Response
 ```
 
 ---
 
-## 💻 Developer Installation and Execution Guide
+# AI Request Flow
 
-### Prerequisites
-*   Node.js (v18.x or newer recommended)
-*   NPM (v9.x or newer)
+```
+User Query
+      │
+      ▼
+Retrieve Relevant Documents
+      │
+      ▼
+Build Context
+      │
+      ▼
+Prompt Engineering
+      │
+      ▼
+Gemini API
+      │
+      ▼
+Security Validation
+      │
+      ▼
+Clean Response
+      │
+      ▼
+Frontend Rendering
+```
 
-### 1. Clone & Install Dependencies
-Navigate into the workspace and run the standard dependency tree installer:
+---
+
+# Multi-Model Failover
+
+PV7 Assistant implements an automatic fallback mechanism to ensure uninterrupted AI responses.
+
+```
+Gemini 2.5 Pro
+        │
+        ▼
+Gemini 2.5 Flash
+        │
+        ▼
+Gemini 1.5 Pro
+        │
+        ▼
+Gemini 1.5 Flash
+```
+
+If a model becomes unavailable due to quota limits, rate limiting, or temporary service interruptions, the backend automatically switches to the next available model without affecting the user experience.
+
+---
+
+# User Interface
+
+The application features a swipeable presentation environment consisting of four minimalist presentation canvases.
+
+- Yellow Theme
+- White Theme
+- Red Theme
+- Black Theme
+
+The PV7 Assistant dynamically adapts its appearance based on the active presentation theme, ensuring visual consistency, readability, and accessibility.
+
+---
+
+# Screenshots
+
+<p align="center">
+
+<img src="./assets/pv7-demo.png" width="100%">
+
+</p>
+
+> Replace the placeholder above with your application screenshot.
+
+---
+
+# Technology Stack
+
+| Category | Technologies |
+|------------|-------------|
+| Frontend | React 18 |
+| Build Tool | Vite |
+| Styling | Tailwind CSS |
+| Animations | Framer Motion |
+| Backend | Express.js |
+| Runtime | Node.js |
+| Language | TypeScript |
+| AI | Google Gemini API |
+| AI Techniques | Retrieval-Augmented Generation (RAG), Prompt Engineering |
+| Icons | Lucide React |
+
+---
+
+# Project Structure
+
+```
+.
+├── src
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+│
+├── server.ts
+├── package.json
+├── tsconfig.json
+├── metadata.json
+├── index.html
+├── .env.example
+└── README.md
+```
+
+---
+
+# Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/yourusername/pv7-assistant.git
+
+cd pv7-assistant
+```
+
+---
+
+## Install Dependencies
+
 ```bash
 npm install
 ```
 
-### 2. Environment Variables Configuration
-Create a `.env` file in the root directory based on the `.env.example`:
-```env
-GEMINI_API_KEY=your_google_ai_studio_api_key_here
-```
-*(Never commit this key or files containing actual secrets to any git repository).*
+---
 
-### 3. Run the Development Server
-Launch the full-stack development workspace (utilizing `tsx` to run the Express backend on port `3000` with the Vite SPA compiler embedded as middleware):
+## Configure Environment Variables
+
+Create a `.env` file.
+
+```env
+GEMINI_API_KEY=YOUR_API_KEY
+```
+
+---
+
+## Start Development Server
+
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### 4. Build for Production
-To bundle both the backend server and static frontend assets into a production-optimized package:
+The application will be available at
+
+```
+http://localhost:3000
+```
+
+---
+
+## Production Build
+
 ```bash
 npm run build
 ```
-This script compiles the Express server into a single CJS bundle at `dist/server.cjs` via `esbuild` and outputs the static React client under the `dist` build path.
 
-### 5. Launch Production Server
+---
+
+## Start Production Server
+
 ```bash
 npm start
 ```
 
 ---
 
-## 🔒 Security & Optimization Best Practices
+# Security
 
-*   **API Security:** The `GEMINI_API_KEY` is fully contained in `process.env` on the server and is never passed to or exposed in the browser.
-*   **Zero-Flicker Transitions:** Page sliding uses spring-based drag physics with CSS hardware-acceleration and `AnimatePresence` to prevent layout reflows during swipe gestures.
-*   **Low Latency Model Parameter Tuning:** Configured with low temperature parameters to accelerate output parsing times and avoid server-side token lag.
+PV7 Assistant follows enterprise-oriented security practices designed to protect both users and backend infrastructure.
+
+### Implemented Protections
+
+- Prompt Injection Detection & Mitigation
+- PII Masking (Email Addresses, Phone Numbers)
+- Backend API Proxy
+- Secure Environment Variables
+- Hidden Gemini API Key
+- Sanitized AI Responses
+- Clean Plain-Text Rendering
+
+---
+
+# Resume Highlights
+
+- Developed **PV7 Assistant**, a production-ready Retrieval-Augmented Generation (RAG) AI chatbot for enterprise customer support.
+- Integrated **Google Gemini API** with RAG and advanced prompt engineering techniques to generate accurate, context-aware responses.
+- Implemented **prompt injection mitigation** and **PII masking** to prevent sensitive information such as phone numbers and email addresses from being exposed to the LLM.
+- Built a secure Express backend with automatic Gemini multi-model failover for improved reliability and availability.
+- Designed a modern swipe-based presentation interface with dynamic glassmorphism and responsive UI.
+
+---
+
+# Future Enhancements
+
+- Voice Conversations
+- Streaming AI Responses
+- Multi-PDF Knowledge Base
+- Authentication & User Roles
+- Conversation History
+- Analytics Dashboard
+- Admin Portal
+- Multi-language Support
+
+---
+
+# Author
+
+**Mohamed Adam**
+
+Computer Science Engineering Student
+
+Passionate about Artificial Intelligence, Full Stack Development, and Building Production-Ready AI Systems.
+
+---
+
+<div align="center">
+
+### ⭐ If you found this project interesting, consider giving it a star!
+
+</div>
