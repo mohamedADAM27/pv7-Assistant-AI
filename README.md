@@ -28,7 +28,7 @@
 
 ---
 
-# ⚡ Overview
+# 1. Overview
 
 **PV7 Assistant** is a production-ready Retrieval-Augmented Generation (RAG) AI assistant developed for **Provahan Infotech** to automate enterprise customer support through intelligent document retrieval and context-aware conversations.
 
@@ -38,7 +38,7 @@ Built with **React**, **Express.js**, **TypeScript**, **Google Gemini**, and adv
 
 ---
 
-# 🌟 Our Vision
+# 2. Our Vision
 
 Enterprise knowledge should be instantly accessible through natural language.
 
@@ -46,7 +46,7 @@ PV7 Assistant aims to bridge the gap between static documentation and intelligen
 
 ---
 
-# 🌐 Live Demo
+# 3. Live Demo
 
 
 
@@ -60,7 +60,7 @@ Enterprise knowledge search
 
 ---
 
-# 📸 Screenshots
+# 4. Screenshots
 
 <p align="center">
 <img src="./assets/pv7-demo.png" width="100%" alt="PV7 Screenshot"/>
@@ -70,7 +70,7 @@ Enterprise knowledge search
 
 ---
 
-# 🎥 Demo Videos
+# 5.  Demo Videos
 
  **Click the link to watch the DEMO**
 <div align="center">
@@ -85,7 +85,7 @@ Enterprise knowledge search
 
 ---
 
-# ✨ Core Features
+# 6. Core Features
 
 ## AI Intelligence
 
@@ -119,7 +119,7 @@ Enterprise knowledge search
 
 ---
 
-# System Architecture
+# System Architecture and Tech Stack
 
 +-------------------------------------------------------------+
 |                      PV7 Assistant                          |
@@ -148,7 +148,7 @@ Enterprise knowledge search
 
 ---
 
-# 🔄 Workflow
+#  Workflow
 
 1. User submits a query.
 2. Backend retrieves relevant enterprise knowledge.
@@ -159,7 +159,7 @@ Enterprise knowledge search
 
 ---
 
-# 🛡️ Security & Privacy
+#  Security & Privacy
 
 PV7 Assistant incorporates enterprise-oriented security practices.
 
@@ -170,82 +170,21 @@ PV7 Assistant incorporates enterprise-oriented security practices.
 - Environment Variable Isolation
 - Plain Text Response Sanitization
 
----
-
-# 🛠️ Technology Stack
-
-| Category | Technologies |
-|----------|--------------|
-| Frontend | React 18, Vite |
-| Backend | Express.js, Node.js |
-| Language | TypeScript |
-| Styling | Tailwind CSS |
-| Animation | Framer Motion |
-| AI | Google Gemini API |
-| AI Techniques | RAG, Prompt Engineering |
-| Icons | Lucide React |
 
 ---
 
-# 🚀 Quick Start
+#  Quick Start
 
-## Prerequisites
+Checkout SETUP_GUIDE.md for setup cloning this project
+<a href="./SETUP_GUIDE.md">
 
-- Node.js 18+
-- npm
+<img src="https://img.shields.io/badge/View-SETUP_GUIDE-7B61FF?style=for-the-badge" alt="Setup Guide"/>
 
-## Installation
-
-```bash
-git clone https://github.com/yourusername/pv7-assistant.git
-
-cd pv7-assistant
-
-npm install
-```
-
-Create a `.env` file:
-
-```env
-GEMINI_API_KEY=YOUR_API_KEY
-```
-
-Run:
-
-```bash
-npm run dev
-```
-
-Build:
-
-```bash
-npm run build
-```
-
-Production:
-
-```bash
-npm start
-```
+</a>
 
 ---
+#  Project Structure
 
-# 📂 Project Structure
-
-```text
-.
-├── src/
-│   ├── App.tsx
-│   ├── main.tsx
-│   └── index.css
-├── server.ts
-├── package.json
-├── tsconfig.json
-├── metadata.json
-├── index.html
-├── .env.example
-└── README.md
-```
 
 ---
 
@@ -261,6 +200,7 @@ Designed a modern swipe-based presentation interface with dynamic glassmorphism 
 # Future Enhancements
 
 PV7 Assistant will continue to evolve with a strong focus on enterprise AI, scalability, and user experience. Planned enhancements include voice-based conversations, real-time streaming AI responses, support for multi-document knowledge bases, authentication with role-based access control, conversation history, analytics and monitoring dashboards, an administrative management portal, multi-language support, and deeper AI capabilities through advanced agentic workflows and seamless third-party integrations.
+
 ---
 
 # Acknowledgements
@@ -283,7 +223,7 @@ Open source continues to drive innovation, and PV7 Assistant stands as a testame
 
 # DEVELOPED BY
 
-## Mohamed Adam
+## Mohamed Adam y BE CSE
 
 **AI INTERN @PROVAHAN INFOTECH**
 
@@ -292,6 +232,5 @@ Passionate about Artificial Intelligence, Full Stack Development, and Building P
 
 ## ⭐ If you found this project interesting, consider giving it a Star!
 
-Made by Mohamed Adam
 
 </div>
