@@ -73,7 +73,7 @@ Enterprise knowledge search
 # 5.  Demo Videos
 
  **Click the link to watch the DEMO**
-<div align="center">
+<div>
 
 <a href="https://youtu.be/flTz_YxM6v4?si=1teqedCG_HhQY9pJ" target="_blank">
 
@@ -144,9 +144,8 @@ Enterprise knowledge search
 |                ▼                                            |
 | Intelligent Enterprise Response                             |
 +-------------------------------------------------------------+
-```
 
----
+
 
 #  Workflow
 
