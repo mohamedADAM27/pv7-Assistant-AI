@@ -48,15 +48,15 @@ PV7 Assistant aims to bridge the gap between static documentation and intelligen
 
 # 🌐 Live Demo
 
-> **Coming Soon**
+
+
 
 The live demonstration will showcase:
-
-- Swipe-based presentation portal
-- Intelligent enterprise AI assistant
-- RAG-powered document retrieval
-- Dynamic theme-adaptive glassmorphism
-- Enterprise knowledge search
+Swipe-based presentation portal
+Intelligent enterprise AI assistant
+RAG-powered document retrieval
+Dynamic theme-adaptive glassmorphism
+Enterprise knowledge search
 
 ---
 
@@ -72,13 +72,16 @@ The live demonstration will showcase:
 
 # 🎥 Demo Videos
 
-### Product Walkthrough
+ **Click the link to watch the DEMO**
+<div align="center">
 
-*Coming Soon*
+<a href="https://youtu.be/flTz_YxM6v4?si=1teqedCG_HhQY9pJ" target="_blank">
 
-### Enterprise Knowledge Retrieval Demo
+<img src="https://img.shields.io/badge/▶%20Watch%20Demo-7B61FF?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Demo"/>
 
-*Coming Soon*
+</a>
+
+</div>
 
 ---
 
@@ -116,9 +119,8 @@ The live demonstration will showcase:
 
 ---
 
-# 🏗️ System Architecture
+# System Architecture
 
-```text
 +-------------------------------------------------------------+
 |                      PV7 Assistant                          |
 +-------------------------------------------------------------+
@@ -247,59 +249,49 @@ npm start
 
 ---
 
-# 💡 Engineering Highlights
+#  Engineering Highlights
 
-- Developed **PV7 Assistant**, a production-ready Retrieval-Augmented Generation (RAG) AI chatbot for enterprise customer support.
-- Integrated **Google Gemini API** with Retrieval-Augmented Generation (RAG) and advanced prompt engineering to generate accurate, context-aware responses.
-- Implemented prompt injection mitigation and PII masking to prevent sensitive information such as phone numbers and email addresses from being exposed to the LLM.
-- Built a secure Express backend with automatic Gemini multi-model failover for improved reliability and availability.
-- Designed a modern swipe-based presentation interface with dynamic glassmorphism and responsive UI.
-
----
-
-# 🗺️ Future Enhancements
-
-- Voice Conversations
-- Streaming AI Responses
-- Multi-PDF Knowledge Base
-- Authentication & User Roles
-- Conversation History
-- Analytics Dashboard
-- Admin Portal
-- Multi-language Support
+Developed **PV7 Assistant**, a production-ready Retrieval-Augmented Generation (RAG) AI chatbot for enterprise customer support.
+Integrated **Google Gemini API** with Retrieval-Augmented Generation (RAG) and advanced prompt engineering to generate accurate, context-aware responses. Implemented prompt injection mitigation and PII masking to prevent sensitive information such as phone numbers and email addresses from being exposed to the LLM.
+Built a secure Express backend with automatic Gemini multi-model failover for improved reliability and availability.
+Designed a modern swipe-based presentation interface with dynamic glassmorphism and responsive UI.
 
 ---
 
-# 🙏 Acknowledgements
+# Future Enhancements
 
-Special thanks to the open-source technologies that power this project.
+PV7 Assistant will continue to evolve with a strong focus on enterprise AI, scalability, and user experience. Planned enhancements include voice-based conversations, real-time streaming AI responses, support for multi-document knowledge bases, authentication with role-based access control, conversation history, analytics and monitoring dashboards, an administrative management portal, multi-language support, and deeper AI capabilities through advanced agentic workflows and seamless third-party integrations.
+---
 
-- React
-- Vite
-- Express.js
-- Tailwind CSS
-- Framer Motion
-- Google Gemini API
-- Lucide React
-- TypeScript
-- Node.js
+# Acknowledgements
+
+Behind every great project is an incredible ecosystem of people, communities, and technologies.
+
+PV7 Assistant is proudly built on top of world-class open-source tools and AI platforms that make modern software development faster, more reliable, and more accessible.
+
+Special appreciation to:
+
+- **Google Gemini** for providing state-of-the-art generative AI capabilities.
+- **The React, Vite, and Node.js communities** for building an exceptional full-stack development ecosystem.
+- **Tailwind CSS** for enabling rapid and elegant user interface development.
+- **Framer Motion** for delivering immersive and fluid user experiences.
+- **The TypeScript community** for making large-scale JavaScript applications safer and easier to maintain.
+
+Open source continues to drive innovation, and PV7 Assistant stands as a testament to what can be built by combining these incredible technologies.
 
 ---
 
-# 👨‍💻 Author
+# DEVELOPED BY
 
 ## Mohamed Adam
 
-**Computer Science Engineering Student**
+**AI INTERN @PROVAHAN INFOTECH**
 
 Passionate about Artificial Intelligence, Full Stack Development, and Building Production-Ready AI Systems.
-
----
-
 <div align="center">
 
 ## ⭐ If you found this project interesting, consider giving it a Star!
 
-Made with ❤️ by Mohamed Adam
+Made by Mohamed Adam
 
 </div>
